@@ -4,30 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
     <title>Tipografia</title>
 </head>
 <body>
     <section class="home">
         <div class="container">
             <article class="first-section">
-                <h1 class="title">
-                    Tipografia
-                </h1>
-                <h2 class="title move">
-                    Open source
-                </h2>
+                <div id="header">
+                    <h1 class="title text-center">
+                        Tipografia
+                    </h1>
+                    <h2 class="title subtitle text-center">
+                        Open source
+                    </h2>
+                </div>
             </article>
             <article class="content">
-                <p class="text">
+                <p class="text obj-transition">
                     Diferente do modo em que estamos acostumado a ver suas utilizações, a maioria das fontes tipográficas são pagas, e necessitam de uma licença para o uso, inclusive não comercial. Porém, existem alguns responsáveis pelo desenvolvimento de scripts que criam fontes gratuitas, que posteriormente, são postadas em repositórios e CDNs com livre acesso.
                 </p>
 
                 <div class="slider">
                     <div class="slide">
-                        <h3 class="title">
+                        <h3 class="title text-center">
                             Arabeyes
-                            2001
                             <a href="https://github.com/arabeyes-org" title="Github"><i class="l_github"></i></a>
+                            <span class="year">2001</span>
                         </h3>
                         <p class="text">
                             Foi o primeiro projeto de fonte open source, cujo o objetivo é apoiar a linguagem árabe nos ambientes Unix e Linux.
@@ -35,10 +42,10 @@
                     </div>
 
                     <div class="slide">
-                        <h3 class="title">
+                        <h3 class="title text-center">
                             GNU Free Fonts
-                            2002
                             <a href="https://github.com/opensourcedesign/fonts" title="Github"><i class="l_github"></i></a>
+                            <span class="year">2002</span>
                         </h3>
                         <p class="text">
                             É uma família de 35 fontes vetoriais criadas pela URW ++ Design & Development GmbH.
@@ -46,10 +53,10 @@
                     </div>
 
                     <div class="slide">
-                        <h3 class="title">
+                        <h3 class="title text-center">
                             Open Font Library
-                            2006
                             <a href="https://fontlibrary.org" title="Site"><i class="l_site"></i></a>
+                            <span class="year">2006</span>
                         </h3>
                         <p class="text">
                             É um projeto que incentiva a criação de fontes tipográficas sob licenças gratuitas além de hospeda-las. Possui mais de 6000 fontes e 250 colaboradores.
@@ -57,10 +64,10 @@
                     </div>
 
                     <div class="slide">
-                        <h3 class="title">
+                        <h3 class="title text-center">
                             Google Fonts
-                            2010
                             <a href="//fonts.google.com/" title="Site"><i class="l_site"></i></a>
+                            <span class="year">2010</span>
                         </h3>
                         <p class="text">
                             Repositório do Google criado em 2010 para a distribuição gratuita de fontes open source, possuindo mais de 800 fontes.
@@ -68,10 +75,10 @@
                     </div>
 
                     <div class="slide">
-                        <h3 class="title">
+                        <h3 class="title text-center">
                             Fontes Noto
-                            2016
                             <a href="https://github.com/googlei18n/noto-fonts" title="Site"><i class="l_github"></i></a>
+                            <span class="year">2016</span>
                         </h3>
                         <p class="text">
                             É uma família de fontes composta com por mais de 100 que foram projetadas para cobrir todos os tipos de scripts Unicodes, tal objetivo foi concluído em 2016.
@@ -82,5 +89,15 @@
             </article>
         </div>
     </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+    <script src="js/main.min.js"></script>
 </body>
 </html>

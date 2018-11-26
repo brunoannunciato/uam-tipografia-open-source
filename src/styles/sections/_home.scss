@@ -1,0 +1,108 @@
+section.home {
+
+    .first-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+    }
+
+    .slider {
+        position: relative;
+    }
+
+    .content {
+        .slick-track, .slick-slide { outline: none !important; }
+
+        .slick-slide {
+            opacity: .4;
+            transition: opacity .4s ease;
+
+            &.slick-current {
+                opacity: 1;
+            }
+        }
+
+        .slick-arrow {
+            position: absolute;
+            &:after {
+                font-family: 'icomoon' !important;
+                content: '\ea50';
+                color: #C93C3C;
+                font-size: 40px;
+            }
+        }
+        .slick-prev {
+            top: 50%;
+            left: 0;
+
+            &:after {
+                transform: rotate(-90deg);
+            }
+        }
+
+        .slick-next {
+            top: 50%;
+            right: 0;
+
+            &:after {
+                transform: rotate(90deg);
+            }
+        }
+
+        .slide {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 0 20px;
+            outline: none !important;
+            cursor: -webkit-grab;
+            position: relative;
+            margin: 0 10%;
+            box-sizing: border-box;
+
+            [class*=l_] {
+                color: #C93C3C;
+                font-size: .5em;
+                cursor: pointer;
+            }
+
+
+            .title {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .year {
+                font-size: 0.8em;
+                position: relative;
+                margin-bottom: 30px;
+
+                &:after {
+                    content: '';
+                    width: 15px;
+                    height: 15px;
+                    background: #C93C3C;
+                    border-radius: 100%;
+                    display: block;
+                    margin: 0 auto;
+                    position: absolute;
+                    bottom: calc(-60% - 7px);
+                    left: calc(50% - 7px);
+                }
+
+                &:before {
+                    content: '';
+                    width: 150%;
+                    position: absolute;
+                    bottom: -60%;
+                    border-bottom: 2px solid #ccc;
+                    left: -30%;
+                }
+            }
+        }
+    }
+}

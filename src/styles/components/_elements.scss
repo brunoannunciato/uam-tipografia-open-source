@@ -1,0 +1,64 @@
+body {
+    .title {
+        font-family: 'Halant';
+        font-size: 2em;
+        margin: 0;
+    }
+
+    .text {
+        font-family: 'Nunito Sans';
+        font-size: 1em;
+    }
+
+    .container {
+        width: 85%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    #header {
+        &.fixed {
+            position: fixed;
+            top: 10px;
+            left: 0;
+            width: 100%;
+            font-size: .7em;
+            transition: font-size .3s ease;
+            background: linear-gradient(to bottom, #ffffff 90%,rgba(255, 255, 255, 0) 100%);
+
+            .subtitle:after {
+                display: none;
+            }
+        }
+
+        .subtitle {
+            &:after {
+                content: '/';
+                animation: blink 1s infinite;
+                color: #C93C3C;
+
+            }
+
+            @keyframes blink {
+                0% { opacity: 0;}
+                45% {opacity: 0;}
+                50% {opacity: 1;}
+                80% {opacity: 1;}
+            }
+        }
+    }
+
+    .obj-transition {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity .6s ease, transform .6s ease;
+        
+        &.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .text-center { text-align: center; }
+    .-bold  { font-weight: bold; }
+}
