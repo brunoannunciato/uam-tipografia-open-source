@@ -65,4 +65,13 @@ body {
 
     .text-center { text-align: center; }
     .-bold  { font-weight: bold; }
+
+    .main-git {
+        position: fixed;
+        top: 15px;
+        font-size: 32px;
+        color: #C93C3C;
+        right: 5%;
+        z-index: 3;
+    }
 }

@@ -1,5 +1,55 @@
 footer.footer {
-    height: 500px;
     background: #444;
-    margin: 25px 0 0;
+    color: #fff;
+    margin: 75px 0 0;
+    padding: 30px 0 50px;
+
+    .title {
+        font-weight: 900;
+        font-size: 1.125em;
+    }
+
+    .group {
+        padding: 0;
+        list-style: none;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .col {
+        min-width: 30%;
+    }
+
+    .tab {
+        .tab-header {
+            display: flex;
+
+            &:after {
+                content: '+';
+                margin-left: 30px;
+                transition: transform .3s ease;
+            }
+        }
+
+        &.show {
+            .tab-header {
+                &:after {
+                    transform: rotate(45deg);
+                }
+            }
+
+            .tab-content {
+                max-height: 600px;
+            }
+        }
+        
+        .tab-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .4s  ease;
+        }
+    }
 }
