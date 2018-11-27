@@ -11,21 +11,25 @@ body {
     }
 
     .container {
-        width: 85%;
+        width: 70%;
         margin: 0 auto;
         display: block;
     }
 
+    .nunito-sans { font-family: 'Nunito Sans'; }
+
     #header {
+
         &.fixed {
             position: fixed;
-            top: 10px;
+            top: 0;
+            padding-top: 10px;
             left: 0;
             width: 100%;
             font-size: .7em;
             transition: font-size .3s ease;
             background: linear-gradient(to bottom, #ffffff 90%,rgba(255, 255, 255, 0) 100%);
-
+            z-index: 2;
             .subtitle:after {
                 display: none;
             }
@@ -34,12 +38,12 @@ body {
         .subtitle {
             &:after {
                 content: '/';
-                animation: blink 1s infinite;
+                animation: pisca 1s infinite;
                 color: #C93C3C;
 
             }
 
-            @keyframes blink {
+            @keyframes pisca {
                 0% { opacity: 0;}
                 45% {opacity: 0;}
                 50% {opacity: 1;}

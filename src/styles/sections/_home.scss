@@ -15,6 +15,10 @@ section.home {
     .content {
         .slick-track, .slick-slide { outline: none !important; }
 
+        .section-description {
+            margin-bottom: 10%;
+        }
+
         .slick-slide {
             opacity: .4;
             transition: opacity .4s ease;
@@ -25,29 +29,36 @@ section.home {
         }
 
         .slick-arrow {
-            position: absolute;
-            &:after {
-                font-family: 'icomoon' !important;
-                content: '\ea50';
-                color: #C93C3C;
-                font-size: 40px;
-            }
+            top: calc(50% - 10px);
         }
-        .slick-prev {
-            top: 50%;
-            left: 0;
 
-            &:after {
-                transform: rotate(-90deg);
+        .slick-prev {
+            position: absolute;
+            left: 0;
+            z-index: 1;
+            left: -2%;
+            font-size: 0;
+            opacity: 1!important;
+
+            &:before {
+                content: '⯇';
+                color: #C93C3C;
+                font-size: 32px;
+                z-index: 1;
             }
         }
 
         .slick-next {
-            top: 50%;
+            position: absolute;
             right: 0;
-
-            &:after {
-                transform: rotate(90deg);
+            z-index: 1;
+            font-size: 0;
+            opacity: 1!important;
+            
+            &:before  {
+                content: '⯈';
+                color: #C93C3C;
+                font-size: 32px;
             }
         }
 
@@ -61,7 +72,6 @@ section.home {
             outline: none !important;
             cursor: -webkit-grab;
             position: relative;
-            margin: 0 10%;
             box-sizing: border-box;
 
             [class*=l_] {
@@ -69,7 +79,6 @@ section.home {
                 font-size: .5em;
                 cursor: pointer;
             }
-
 
             .title {
                 display: flex;
