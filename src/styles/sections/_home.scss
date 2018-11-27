@@ -23,13 +23,17 @@ section.home {
             opacity: .4;
             transition: opacity .4s ease;
 
+            .title {
+                font-size: 1.8em;
+            }
+
             &.slick-current {
                 opacity: 1;
             }
         }
 
         .slick-arrow {
-            top: calc(50% - 10px);
+            top: calc(50% - 23px);
         }
 
         .slick-prev {
