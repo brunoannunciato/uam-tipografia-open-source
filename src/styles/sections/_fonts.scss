@@ -21,7 +21,7 @@ section.fonts {
                 }
 
                 .tab-content {
-                    max-height: 1000px;
+                    max-height: 1500px;
                     padding: 10px 45px;
                 }
             }
@@ -79,6 +79,22 @@ section.fonts {
             .designers {
                 display: flex;
                 justify-content: space-around;
+            }
+
+            ul.structure {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    padding-left: 1em; 
+                    text-indent: -.7em;
+
+                    &::before {
+                        content: "• ";
+                        color: #C93C3C;
+                      }
+                  }
             }
 
             .card {
